@@ -1,7 +1,7 @@
 import { redis } from "@/lib/redis";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { env } from "../../env.mjs";
+import { env } from "../env.mjs";
 import { db } from "@/server/db";
 
 const auth_prefix = "gemish:auth";
