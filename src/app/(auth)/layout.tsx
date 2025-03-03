@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { geistMono, geistSans } from "@/styles/fonts";
+import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/next";
