@@ -7,16 +7,18 @@ import { env } from "@/env.mjs";
 // Initialize S3 client
 const s3Client = new S3Client({
   region: env.AWS_REGION,
+  endpoint: env.AWS_ENDPOINT_URL,
   credentials: {
     accessKeyId: env.AWS_ACCESS_KEY_ID,
     secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
   },
+  forcePathStyle: false,
 });
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { fileName, fileType } = body;
+    const { fileName, fileType }: { fileName: string; fileType: string } = body;
 
     if (!fileName || !fileType) {
       return NextResponse.json(
