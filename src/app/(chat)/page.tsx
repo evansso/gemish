@@ -7,7 +7,7 @@ export default function Home() {
 		<div className="w-full min-h-screen">
 			<Suspense
 				fallback={
-					<div className="flex justify-center items-center w-full">
+					<div className="flex justify-center flex-col mx-auto items-center w-full">
 						<Loader2 className="animate-spin" />
 					</div>
 				}
