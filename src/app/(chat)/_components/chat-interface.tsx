@@ -36,6 +36,7 @@ export function ChatInterface({
 	};
 
 	// Auto-scroll to bottom when messages change or when loading state changes
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		scrollToBottom();
 	}, [messages, isLoading]);
