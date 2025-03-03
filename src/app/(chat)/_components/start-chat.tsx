@@ -1,8 +1,8 @@
 "use client";
 
-import { ChatInput } from "./chat-input";
-import type { Options } from "nuqs";
 import { generateId } from "ai";
+import type { Options } from "nuqs";
+import { ChatInput } from "./chat-input";
 
 export function StartChat({
 	onSubmit,
@@ -10,7 +10,7 @@ export function StartChat({
 	handleInputChange,
 	isLoading,
 	setHasSubmitted,
-  setConversation,
+	setConversation,
 	stop,
 }: {
 	onSubmit: (e: React.FormEvent) => void;
@@ -28,12 +28,12 @@ export function StartChat({
 	) => Promise<URLSearchParams>;
 	stop: () => void;
 }) {
-  const id = generateId()
-  
+	const id = generateId();
+
 	const submitChat = (e: React.FormEvent) => {
 		e.preventDefault();
 		setHasSubmitted(true);
-    setConversation(id)
+		setConversation(id);
 		onSubmit(e);
 	};
 
@@ -41,9 +41,7 @@ export function StartChat({
 		<div className="flex flex-col items-center justify-center min-h-screen bg-background p-4">
 			<div className="w-full max-w-2xl text-center space-y-8">
 				<div className="space-y-4">
-					<h1 className="text-4xl font-bold tracking-tight">
-						Gemish
-					</h1>
+					<h1 className="text-4xl font-medium">Gemish</h1>
 				</div>
 				<ChatInput
 					stop={stop}
