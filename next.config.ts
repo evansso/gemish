@@ -4,9 +4,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  compiler: {
-    removeConsole: true,
-  },
 };
 
 export default nextConfig;

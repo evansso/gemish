@@ -1,8 +1,12 @@
 import { createAuthClient } from "better-auth/react";
-import { baseURL } from "./auth";
+
+const baseURL =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3001"
+    : "https://gemish.vercel.app";
 
 export const authClient = createAuthClient({
-	baseURL,
+  baseURL,
 });
 
 export const { signIn, signOut, signUp, useSession } = authClient;
