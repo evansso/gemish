@@ -53,7 +53,7 @@ export function ChatMarkdown({ content }: { content: string }) {
 		};
 
 		return (
-			<div className="relative group">
+			<div className="relative group font-mono">
 				<SyntaxHighlighter
 					language={language || "text"}
 					style={oneDark}

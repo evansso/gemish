@@ -1,15 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Inter_Tight, Urbanist } from "next/font/google";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-	preload: true,
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
+  subsets: ["latin"],
+  preload: true,
+});
+
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
+  subsets: ["latin"],
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-	preload: true,
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  preload: true,
 });
 
-export { geistMono, geistSans };
+export { urbanist, interTight, geistMono };

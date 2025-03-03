@@ -1,7 +1,8 @@
-import { geistMono, geistSans } from "@/styles/fonts";
+import { geistMono, interTight, urbanist } from "@/styles/fonts";
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
@@ -17,7 +18,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-[100svh] flex-col items-center justify-center gap-4 sm:gap-6 p-4 sm:p-6 md:p-10`}
+				className={cn(
+					interTight.variable,
+					urbanist.variable,
+					geistMono.variable,
+					"antialiased flex min-h-[100svh] flex-col items-center justify-center gap-4 sm:gap-6 p-4 sm:p-6 md:p-10",
+				)}
 			>
 				{children}
 				<Toaster richColors />
